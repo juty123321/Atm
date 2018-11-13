@@ -19,7 +19,8 @@ public class LoginActivity extends AppCompatActivity {
         String userid = ((EditText)findViewById(R.id.ed_userid)).getText().toString();
         String passwd = ((EditText)findViewById(R.id.ed_passwd)).getText().toString();
         if ("juty123321".equals(userid) && "123456789".equals(passwd)) {
-            Toast.makeText(this, "登入成功", Toast.LENGTH_LONG).show();
+            getSharedPreferences("atm",MODE_PRIVATE)
+                    .edit().putString("USERID",userid).apply();
             finish();
         }else{ //登入失敗
             new AlertDialog.Builder(this)
