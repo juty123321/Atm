@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/ed_userid"
+        android:id="@+id/ed_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -35,11 +35,11 @@
         android:layout_marginTop="24dp"
         android:text="密碼"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toStartOf="@+id/ed_userid"
-        app:layout_constraintTop_toBottomOf="@+id/ed_userid" />
+        app:layout_constraintStart_toStartOf="@+id/ed_username"
+        app:layout_constraintTop_toBottomOf="@+id/ed_username" />
 
     <EditText
-        android:id="@+id/ed_passwd"
+        android:id="@+id/ed_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -57,8 +57,8 @@
         android:layout_marginTop="24dp"
         android:onClick="login"
         android:text="登入"
-        app:layout_constraintStart_toStartOf="@+id/ed_passwd"
-        app:layout_constraintTop_toBottomOf="@+id/ed_passwd" />
+        app:layout_constraintStart_toStartOf="@+id/ed_password"
+        app:layout_constraintTop_toBottomOf="@+id/ed_password" />
 
     <Button
         android:id="@+id/button3"
@@ -70,6 +70,6 @@
         android:onClick="cancel"
         android:text="取消"
         app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/ed_passwd" />
+        app:layout_constraintTop_toBottomOf="@+id/ed_password" />
 
 </android.support.constraint.ConstraintLayout>
