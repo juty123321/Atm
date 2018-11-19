@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
         ed_password = findViewById(R.id.ed_password);
         username = ed_username.getText().toString();
         password = ed_password.getText().toString();
-        if ("juty123321".equals(username) && "123456789".equals(password)) {
+        if ("juty123321".equals(username) && "123456789".equals(password)) { //登入成功
             getSharedPreferences("atm",MODE_PRIVATE)
                     .edit().putString("USERID",username).apply();
             finish();
@@ -40,6 +40,10 @@ public class LoginActivity extends AppCompatActivity {
                     .show();
 
         }
+    }
+
+    public void cancel(View view){
+
     }
 }
 
