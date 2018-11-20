@@ -28,9 +28,12 @@ public class LoginActivity extends AppCompatActivity {
         ed_password = findViewById(R.id.ed_password);
         username = ed_username.getText().toString();
         password = ed_password.getText().toString();
-        if ("juty123321".equals(username) && "123456789".equals(password)) { //登入成功
+        if ("juty".equals(username) && "123".equals(password)) { //登入成功
             getSharedPreferences("atm",MODE_PRIVATE)
-                    .edit().putString("USERID",username).apply();
+                    .edit()
+                    .putString("USERID",username)
+                    .apply();
+            setResult(RESULT_OK);
             finish();
         }else{ //登入失敗
             new AlertDialog.Builder(this)
